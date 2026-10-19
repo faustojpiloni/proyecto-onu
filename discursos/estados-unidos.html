@@ -16,7 +16,7 @@
     <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="../assets/css/style.css">
 
-    <!-- Posicionamiento para intercalar los marcos Polaroid de Servicios en el texto -->
+    <!-- Posicionamiento para intercalar los marcos Polaroid en el texto -->
     <style>
         .texto-discurso {
             font-size: 1.1rem;
@@ -27,15 +27,25 @@
             margin: 0 auto;
         }
 
-        /* Ubicación flotante derecha e izquierda para las polaroids de servicios */
+        /* Contenedores flotantes con ancho fijo para que la polaroid no colapse a 0px */
         .polaroid-flotante-der {
             float: right;
-            margin: 10px 0 20px 30px;
+            margin: 5px 0 20px 40px;
+            width: 320px; 
         }
 
         .polaroid-flotante-izq {
             float: left;
-            margin: 10px 30px 20px 0;
+            margin: 5px 40px 20px 0;
+            width: 320px;
+        }
+
+        /* Forzamos el alto de la imagen (la clase original dependía de flexbox) */
+        .polaroid-flotante-der .polaroid-service-img,
+        .polaroid-flotante-izq .polaroid-service-img {
+            height: 220px !important;
+            width: 100% !important;
+            display: block;
         }
 
         /* Limpieza de flotados */
@@ -49,9 +59,10 @@
             .polaroid-flotante-der, 
             .polaroid-flotante-izq {
                 float: none;
-                display: flex;
-                justify-content: center;
-                margin: 20px auto;
+                display: block;
+                margin: 30px auto;
+                width: 100%;
+                max-width: 350px;
             }
         }
     </style>
@@ -83,7 +94,7 @@
     </header>
 
     <main>
-        <!-- SECCIÓN: FOTO HERO (Idéntica a la sección DISCURSOS) -->
+        <!-- SECCIÓN: TÍTULO DEL PAÍS (Ahora usa la clase hero-discursos exacta) -->
         <section class="hero-discursos" style="background-image: none; background-color: #51668D;">
             <h1>ESTADOS UNIDOS</h1>
         </section>
@@ -190,7 +201,7 @@
     </footer>
 
     <!-- BOTÓN VOLVER ARRIBA -->
-    <button id="btnVolverArriba" title="Volver al inicio">
+    <button id="btnVolverArriba" class="btn-volver-arriba" title="Volver arriba">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
 

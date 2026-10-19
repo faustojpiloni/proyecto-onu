@@ -15,55 +15,14 @@
     
     <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="../assets/css/style.css">
-
-    <!-- Posicionamiento para intercalar los marcos Polaroid en el texto -->
+    
+    <!-- Un pequeño ajuste para que el texto del discurso se justifique y tenga buen tamaño -->
     <style>
-        .texto-discurso {
+        .service-info p {
             font-size: 1.1rem;
             line-height: 1.8;
             text-align: justify;
             color: #222222;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        /* Contenedores flotantes con ancho fijo para que la polaroid no colapse a 0px */
-        .polaroid-flotante-der {
-            float: right;
-            margin: 5px 0 20px 40px;
-            width: 320px; 
-        }
-
-        .polaroid-flotante-izq {
-            float: left;
-            margin: 5px 40px 20px 0;
-            width: 320px;
-        }
-
-        /* Forzamos el alto de la imagen (la clase original dependía de flexbox) */
-        .polaroid-flotante-der .polaroid-service-img,
-        .polaroid-flotante-izq .polaroid-service-img {
-            height: 220px !important;
-            width: 100% !important;
-            display: block;
-        }
-
-        /* Limpieza de flotados */
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        @media (max-width: 768px) {
-            .polaroid-flotante-der, 
-            .polaroid-flotante-izq {
-                float: none;
-                display: block;
-                margin: 30px auto;
-                width: 100%;
-                max-width: 350px;
-            }
         }
     </style>
 </head>
@@ -94,86 +53,81 @@
     </header>
 
     <main>
-        <!-- SECCIÓN: TÍTULO DEL PAÍS (Ahora usa la clase hero-discursos exacta) -->
+        <!-- SECCIÓN: TÍTULO DEL PAÍS -->
         <section class="hero-discursos" style="background-image: none; background-color: #51668D;">
             <h1>ESTADOS UNIDOS</h1>
         </section>
 
-        <!-- SECCIÓN: TEXTO DEL DISCURSO CON FOTOS POLAROID INTERCALADAS -->
-        <section class="detalle-texto-section bg-white" style="padding: 60px 0;">
-            <div class="container clearfix">
+        <!-- SECCIÓN: TEXTO DEL DISCURSO (Usando la estructura original de Servicios) -->
+        <section class="services-list-section bg-white" style="padding-top: 60px;">
+            <div class="container">
                 
-                <div class="texto-discurso">
-                    
-                    <!-- Imagen 1: Formato Polaroid de Servicios a la DERECHA -->
-                    <div class="polaroid-flotante-der">
-                        <div class="polaroid-service">
-                            <div class="polaroid-service-img" style="background-color: #cccccc;"></div>
-                        </div>
+                <!-- BLOQUE 1: Imagen a la DERECHA (Gracias a la clase 'reverse') -->
+                <div class="service-card reverse">
+                    <div class="polaroid-service">
+                        <div class="polaroid-service-img" style="background-color: #e6e6e6;"></div>
                     </div>
-                    
-                    <p>
-                        Aquí comienza el primer bloque de texto del discurso de Estados Unidos. 
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non est ac massa dignissim fermentum. 
-                        Suspendisse eget mauris in eros euismod commodo. Etiam ultricies fermentum felis, et hendrerit 
-                        enim consequat a. Integer vestibulum felis massa, vitae iaculis dui venenatis id. Aenean semper 
-                        tortor ut pretium consequat. Ut dapibus purus eget cursus posuere.
-                    </p>
-
-                    <p>
-                        Integer pretium lobortis ipsum, sed porta augue luctus nec. Donec fermentum viverra diam, id 
-                        facilisis nulla finibus ut. Donec venenatis augue a vestibulum pulvinar. Morbi euismod est vitae 
-                        justo efficitur, nec elementum tellus elementum. Etiam elit augue, lobortis vel arcu non, tincidunt 
-                        egestas odio.
-                    </p>
-
-                    <!-- Imagen 2: Formato Polaroid de Servicios a la IZQUIERDA -->
-                    <div class="polaroid-flotante-izq">
-                        <div class="polaroid-service">
-                            <div class="polaroid-service-img" style="background-color: #999999;"></div>
-                        </div>
+                    <div class="service-info">
+                        <p>
+                            Aquí comienza el primer bloque de texto del discurso de Estados Unidos. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non est ac massa dignissim fermentum. 
+                            Suspendisse eget mauris in eros euismod commodo. Etiam ultricies fermentum felis, et hendrerit 
+                            enim consequat a. Integer vestibulum felis massa, vitae iaculis dui venenatis id. Aenean semper 
+                            tortor ut pretium consequat.
+                        </p>
+                        <p>
+                            Integer pretium lobortis ipsum, sed porta augue luctus nec. Donec fermentum viverra diam, id 
+                            facilisis nulla finibus ut. Donec venenatis augue a vestibulum pulvinar. Morbi euismod est vitae 
+                            justo efficitur, nec elementum tellus elementum.
+                        </p>
                     </div>
+                </div>
 
-                    <p>
-                        Este es el segundo bloque de texto. La foto en formato Polaroid de arriba flota a la izquierda 
-                        y el texto la envuelve suavemente por la derecha. Aenean lacinia bibendum nulla sed consectetur. 
-                        Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor. 
-                        Nullam quis risus eget urna mollis ornare vel eu leo.
-                    </p>
-
-                    <p>
-                        Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus 
-                        magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus. 
-                        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-                    </p>
-
-                    <!-- Imagen 3: Formato Polaroid de Servicios a la DERECHA -->
-                    <div class="polaroid-flotante-der">
-                        <div class="polaroid-service">
-                            <div class="polaroid-service-img" style="background-color: #666666;"></div>
-                        </div>
+                <!-- BLOQUE 2: Imagen a la IZQUIERDA (Sin la clase 'reverse') -->
+                <div class="service-card">
+                    <div class="polaroid-service">
+                        <div class="polaroid-service-img" style="background-color: #cccccc;"></div>
                     </div>
+                    <div class="service-info">
+                        <p>
+                            Este es el segundo bloque de texto. La foto en formato Polaroid aparece ahora a la izquierda. 
+                            Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. 
+                            Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+                        </p>
+                        <p>
+                            Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus 
+                            magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus. 
+                            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                        </p>
+                    </div>
+                </div>
 
-                    <p>
-                        Y aquí el bloque final del discurso. La última Polaroid se alinea a la derecha. 
-                        Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula 
-                        ut id elit. Vestibulum id ligula porta felis euismod semper.
-                    </p>
-                    
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum 
-                        nulla sed consectetur. Sed posuere consectetur est at lobortis. Final del discurso de la 
-                        delegación.
-                    </p>
+                <!-- BLOQUE 3: Imagen a la DERECHA (Nuevamente con la clase 'reverse') -->
+                <div class="service-card reverse">
+                    <div class="polaroid-service">
+                        <div class="polaroid-service-img" style="background-color: #999999;"></div>
+                    </div>
+                    <div class="service-info">
+                        <p>
+                            Y aquí el bloque final del discurso. La última Polaroid se alinea nuevamente a la derecha. 
+                            Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula 
+                            ut id elit. Vestibulum id ligula porta felis euismod semper.
+                        </p>
+                        <p>
+                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum 
+                            nulla sed consectetur. Sed posuere consectetur est at lobortis. Final del discurso de la 
+                            delegación de Estados Unidos.
+                        </p>
+                    </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- SECCIÓN: BOTONES DE NAVEGACIÓN ANTERIOR / SIGUIENTE (ESTILO ORIGINAL) -->
+        <!-- SECCIÓN: BOTONES DE NAVEGACIÓN ANTERIOR / SIGUIENTE -->
         <section class="detalle-navegacion-section">
             <div class="container nav-buttons-container">
-                <!-- Botón ANTERIOR deshabilitado (primer país) manteniendo estética original -->
+                <!-- Botón ANTERIOR deshabilitado -->
                 <a href="javascript:void(0);" class="btn-nav-proyecto disabled" style="opacity: 0.4; cursor: not-allowed;">
                     <i class="fa-solid fa-arrow-left"></i> ANTERIOR
                 </a>
@@ -186,7 +140,7 @@
         </section>
     </main>
 
-    <!-- PIE DE PÁGINA (FOOTER) - FONDO NEGRO Y MENÚ CENTRADO -->
+    <!-- PIE DE PÁGINA (FOOTER) -->
     <footer class="main-footer" style="background-color: #000000;">
         <div class="footer-top container" style="display: flex; justify-content: center; align-items: center;">
             <div class="footer-col footer-nav" style="text-align: center;">

@@ -721,6 +721,89 @@ body {
 }
 
 /* ==========================================================================
+   CARRUSEL DE FOTOS / GALERÍA SECUNDARIA (fotos/index.html)
+   ========================================================================== */
+.detalle-galeria-section {
+    background-color: #ffffff;
+    padding: 5rem 1rem;
+}
+
+.carousel-proyecto-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 8px solid #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-proyecto-track-container {
+    height: 60vh; 
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-proyecto-track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-slide.current-slide {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel-slide img,
+.carousel-slide .img-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(81, 102, 141, 0.6); 
+    color: #ffffff;
+    border: none;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: rgba(34, 34, 34, 0.85);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.prev-btn { left: 15px; }
+.next-btn { right: 15px; }
+
+/* ==========================================================================
    DISEÑO RESPONSIVE (CELULARES Y TABLETS)
    ========================================================================== */
 @media (max-width: 768px) {
@@ -810,6 +893,18 @@ body {
     .service-info p {
         font-size: 1rem;
         text-align: justify;
+    }
+
+    /* Ajustes para el Carrusel en Móvil */
+    .carousel-proyecto-track-container {
+        height: 40vh;
+        min-height: 250px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
 
     .footer-top {

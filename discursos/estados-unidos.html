@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estados Unidos | PROYECTO ONU</title>
     
+    <!-- Fuentes de Google: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Iconos de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="../assets/css/style.css">
 
-    <!-- Estilos específicos para las imágenes intercaladas en el texto -->
+    <!-- Posicionamiento para intercalar los marcos Polaroid de Servicios en el texto -->
     <style>
         .texto-discurso {
             font-size: 1.1rem;
@@ -23,27 +27,18 @@
             margin: 0 auto;
         }
 
-        .img-flotante-der {
+        /* Ubicación flotante derecha e izquierda para las polaroids de servicios */
+        .polaroid-flotante-der {
             float: right;
-            margin: 0 0 20px 30px;
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 10px 0 20px 30px;
         }
 
-        .img-flotante-izq {
+        .polaroid-flotante-izq {
             float: left;
-            margin: 0 30px 20px 0;
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 10px 30px 20px 0;
         }
 
-        /* Limpiar flotados para que el footer no se superponga si el texto es corto */
+        /* Limpieza de flotados */
         .clearfix::after {
             content: "";
             clear: both;
@@ -51,12 +46,12 @@
         }
 
         @media (max-width: 768px) {
-            .img-flotante-der, .img-flotante-izq {
+            .polaroid-flotante-der, 
+            .polaroid-flotante-izq {
                 float: none;
-                display: block;
+                display: flex;
+                justify-content: center;
                 margin: 20px auto;
-                width: 100%;
-                max-width: 400px;
             }
         }
     </style>
@@ -69,12 +64,14 @@
             <img src="../assets/img/logo_iades.png" alt="Logo IADES" style="max-height: 100px;">
         </a>
 
+        <!-- BOTÓN HAMBURGUESA -->
         <div class="menu-toggle" id="mobile-menu">
             <span></span>
             <span></span>
             <span></span>
         </div>
 
+        <!-- MENÚ DE NAVEGACIÓN -->
         <nav class="main-nav">
             <ul id="nav-list">
                 <li><a href="../">INICIO</a></li>
@@ -86,20 +83,26 @@
     </header>
 
     <main>
-        <!-- SECCIÓN: TÍTULO DEL PAÍS -->
-        <section class="hero-detalle-proyecto" style="background-image: none; background-color: #51668D;">
+        <!-- SECCIÓN: FOTO HERO (Idéntica a la sección DISCURSOS) -->
+        <section class="hero-discursos" style="background-image: none; background-color: #51668D;">
             <h1>ESTADOS UNIDOS</h1>
         </section>
 
-        <!-- SECCIÓN: TEXTO DEL DISCURSO CON IMÁGENES INTERCALADAS -->
-        <section class="detalle-texto-section bg-white">
+        <!-- SECCIÓN: TEXTO DEL DISCURSO CON FOTOS POLAROID INTERCALADAS -->
+        <section class="detalle-texto-section bg-white" style="padding: 60px 0;">
             <div class="container clearfix">
                 
                 <div class="texto-discurso">
-                    <!-- Primera imagen: Flota a la DERECHA -->
-                    <div class="img-flotante-der img-placeholder" style="background-color: #e6e6e6;"></div>
+                    
+                    <!-- Imagen 1: Formato Polaroid de Servicios a la DERECHA -->
+                    <div class="polaroid-flotante-der">
+                        <div class="polaroid-service">
+                            <div class="polaroid-service-img" style="background-color: #cccccc;"></div>
+                        </div>
+                    </div>
                     
                     <p>
+                        Aquí comienza el primer bloque de texto del discurso de Estados Unidos. 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non est ac massa dignissim fermentum. 
                         Suspendisse eget mauris in eros euismod commodo. Etiam ultricies fermentum felis, et hendrerit 
                         enim consequat a. Integer vestibulum felis massa, vitae iaculis dui venenatis id. Aenean semper 
@@ -113,11 +116,16 @@
                         egestas odio.
                     </p>
 
-                    <!-- Segunda imagen: Flota a la IZQUIERDA -->
-                    <div class="img-flotante-izq img-placeholder" style="background-color: #cccccc;"></div>
+                    <!-- Imagen 2: Formato Polaroid de Servicios a la IZQUIERDA -->
+                    <div class="polaroid-flotante-izq">
+                        <div class="polaroid-service">
+                            <div class="polaroid-service-img" style="background-color: #999999;"></div>
+                        </div>
+                    </div>
 
                     <p>
-                        Aenean lacinia bibendum nulla sed consectetur. 
+                        Este es el segundo bloque de texto. La foto en formato Polaroid de arriba flota a la izquierda 
+                        y el texto la envuelve suavemente por la derecha. Aenean lacinia bibendum nulla sed consectetur. 
                         Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor. 
                         Nullam quis risus eget urna mollis ornare vel eu leo.
                     </p>
@@ -128,28 +136,34 @@
                         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
                     </p>
 
-                    <!-- Tercera imagen: Flota a la DERECHA nuevamente -->
-                    <div class="img-flotante-der img-placeholder" style="background-color: #999999;"></div>
+                    <!-- Imagen 3: Formato Polaroid de Servicios a la DERECHA -->
+                    <div class="polaroid-flotante-der">
+                        <div class="polaroid-service">
+                            <div class="polaroid-service-img" style="background-color: #666666;"></div>
+                        </div>
+                    </div>
 
                     <p>
+                        Y aquí el bloque final del discurso. La última Polaroid se alinea a la derecha. 
                         Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula 
                         ut id elit. Vestibulum id ligula porta felis euismod semper.
                     </p>
                     
                     <p>
                         Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum 
-                        nulla sed consectetur. Sed posuere consectetur est at lobortis.
+                        nulla sed consectetur. Sed posuere consectetur est at lobortis. Final del discurso de la 
+                        delegación.
                     </p>
                 </div>
 
             </div>
         </section>
 
-        <!-- SECCIÓN: BOTONES DE NAVEGACIÓN ANTERIOR / SIGUIENTE -->
+        <!-- SECCIÓN: BOTONES DE NAVEGACIÓN ANTERIOR / SIGUIENTE (ESTILO ORIGINAL) -->
         <section class="detalle-navegacion-section">
             <div class="container nav-buttons-container">
-                <!-- Botón ANTERIOR bloqueado porque es el primer país -->
-                <a href="#" class="btn-nav-proyecto disabled" style="pointer-events: none; color: #a0a0a0;">
+                <!-- Botón ANTERIOR deshabilitado (primer país) manteniendo estética original -->
+                <a href="javascript:void(0);" class="btn-nav-proyecto disabled" style="opacity: 0.4; cursor: not-allowed;">
                     <i class="fa-solid fa-arrow-left"></i> ANTERIOR
                 </a>
                 

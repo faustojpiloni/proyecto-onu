@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucrania | PROYECTO ONU</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
 
+    <!-- Estilos específicos para las imágenes intercaladas en el texto -->
+    <style>
+        .texto-discurso {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            color: #222222;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .img-flotante-der {
+            float: right;
+            margin: 0 0 20px 30px;
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .img-flotante-izq {
+            float: left;
+            margin: 0 30px 20px 0;
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Limpiar flotados para que el footer no se superponga si el texto es corto */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        @media (max-width: 768px) {
+            .img-flotante-der, .img-flotante-izq {
+                float: none;
+                display: block;
+                margin: 20px auto;
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA Y NAVEGACIÓN -->
+    <header class="main-header">
+        <a href="../" class="logo-link">
+            <img src="../assets/img/logo_iades.png" alt="Logo IADES" style="max-height: 100px;">
+        </a>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="main-nav">
+            <ul id="nav-list">
+                <li><a href="../">INICIO</a></li>
+                <li><a href="./" class="active">DISCURSOS</a></li>
+                <li><a href="../reflexion/">REFLEXIÓN</a></li>
+                <li><a href="../fotos/">FOTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN: TÍTULO DEL PAÍS -->
+        <section class="hero-detalle-proyecto" style="background-image: none; background-color: #51668D;">
+            <h1>UCRANIA</h1>
+        </section>
+
+        <!-- SECCIÓN: TEXTO DEL DISCURSO CON IMÁGENES INTERCALADAS -->
+        <section class="detalle-texto-section bg-white">
+            <div class="container clearfix">
+                
+                <div class="texto-discurso">
+                    <!-- Primera imagen: Flota a la DERECHA -->
+                    <div class="img-flotante-der img-placeholder" style="background-color: #e6e6e6;"></div>
+                    
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non est ac massa dignissim fermentum. 
+                        Suspendisse eget mauris in eros euismod commodo. Etiam ultricies fermentum felis, et hendrerit 
+                        enim consequat a. Integer vestibulum felis massa, vitae iaculis dui venenatis id. Aenean semper 
+                        tortor ut pretium consequat. Ut dapibus purus eget cursus posuere.
+                    </p>
+
+                    <p>
+                        Integer pretium lobortis ipsum, sed porta augue luctus nec. Donec fermentum viverra diam, id 
+                        facilisis nulla finibus ut. Donec venenatis augue a vestibulum pulvinar. Morbi euismod est vitae 
+                        justo efficitur, nec elementum tellus elementum. Etiam elit augue, lobortis vel arcu non, tincidunt 
+                        egestas odio.
+                    </p>
+
+                    <!-- Segunda imagen: Flota a la IZQUIERDA -->
+                    <div class="img-flotante-izq img-placeholder" style="background-color: #cccccc;"></div>
+
+                    <p>
+                        Aenean lacinia bibendum nulla sed consectetur. 
+                        Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor. 
+                        Nullam quis risus eget urna mollis ornare vel eu leo.
+                    </p>
+
+                    <p>
+                        Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus 
+                        magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus. 
+                        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                    </p>
+
+                    <!-- Tercera imagen: Flota a la DERECHA nuevamente -->
+                    <div class="img-flotante-der img-placeholder" style="background-color: #999999;"></div>
+
+                    <p>
+                        Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula 
+                        ut id elit. Vestibulum id ligula porta felis euismod semper.
+                    </p>
+                    
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum 
+                        nulla sed consectetur. Sed posuere consectetur est at lobortis.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN: BOTONES DE NAVEGACIÓN ANTERIOR / SIGUIENTE -->
+        <section class="detalle-navegacion-section">
+            <div class="container nav-buttons-container">
+                <!-- Botón ANTERIOR hacia ESTADOS UNIDOS -->
+                <a href="rusia.html" class="btn-nav-proyecto">
+                    <i class="fa-solid fa-arrow-left"></i> ANTERIOR
+                </a>
+                
+                <!-- Botón SIGUIENTE hacia PALESTINA -->
+                <a href="palestina.html" class="btn-nav-proyecto">
+                    SIGUIENTE <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) - FONDO NEGRO Y MENÚ CENTRADO -->
+    <footer class="main-footer" style="background-color: #000000;">
+        <div class="footer-top container" style="display: flex; justify-content: center; align-items: center;">
+            <div class="footer-col footer-nav" style="text-align: center;">
+                <ul style="align-items: center;">
+                    <li><a href="../">INICIO</a></li>
+                    <li><a href="./">DISCURSOS</a></li>
+                    <li><a href="../reflexion/">REFLEXIÓN</a></li>
+                    <li><a href="../fotos/">FOTOS</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <button id="btnVolverArriba" title="Volver al inicio">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // --- LÓGICA DEL BOTÓN "VOLVER ARRIBA" ---
+        const btnVolver = document.getElementById("btnVolverArriba");
+
+        if (btnVolver) {
+            window.onscroll = function() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    btnVolver.classList.add("mostrar");
+                } else {
+                    btnVolver.classList.remove("mostrar");
+                }
+            };
+            btnVolver.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        }
+
+        // --- SCRIPT PARA CELULARES ---
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        if(mobileMenu) {
+            mobileMenu.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+                navList.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discursos | PROYECTO ONU</title>
+    
+    <!-- Fuentes de Google: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
 
+    <!-- CABECERA Y NAVEGACIÓN -->
+    <header class="main-header">
+        <!-- El enlace lleva al inicio ../ -->
+        <a href="../" class="logo-link">
+            <!-- LOGO DEL COLEGIO -->
+            <img src="../assets/img/logo_iades.png" alt="Logo IADES" style="max-height: 100px;">
+        </a>
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="main-nav">
+            <ul id="nav-list">
+                <li><a href="../">INICIO</a></li>
+                <li><a href="./" class="active">DISCURSOS</a></li>
+                <li><a href="../reflexion/">REFLEXIÓN</a></li>
+                <li><a href="../fotos/">FOTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN: FOTO HERO -->
+        <section class="hero-discursos">
+            <div class="hero-overlay"></div>
+            <h1>DISCURSOS</h1>
+        </section>
+
+        <!-- SECCIÓN: GRILLA DE BANDERAS/PAÍSES -->
+        <section class="discursos-grid-section bg-white">
+            <div class="container">
+                <div class="discursos-grid">
+                    
+                    <!-- ESTADOS UNIDOS -->
+                    <a href="estados-unidos.html" class="bandera-card">
+                        <div class="bandera-img-wrapper">
+                            <!-- Aquí luego irá el <img src="..."> de la bandera -->
+                            <div class="img-placeholder" style="background-color: #e6e6e6;"></div>
+                            <div class="bandera-overlay">
+                                <span class="btn-leer-discurso">LEER DISCURSO</span>
+                            </div>
+                        </div>
+                        <div class="bandera-title">ESTADOS UNIDOS</div>
+                    </a>
+
+                    <!-- ISRAEL -->
+                    <a href="israel.html" class="bandera-card">
+                        <div class="bandera-img-wrapper">
+                            <div class="img-placeholder" style="background-color: #cccccc;"></div>
+                            <div class="bandera-overlay">
+                                <span class="btn-leer-discurso">LEER DISCURSO</span>
+                            </div>
+                        </div>
+                        <div class="bandera-title">ISRAEL</div>
+                    </a>
+
+                    <!-- PALESTINA -->
+                    <a href="palestina.html" class="bandera-card">
+                        <div class="bandera-img-wrapper">
+                            <div class="img-placeholder" style="background-color: #b3b3b3;"></div>
+                            <div class="bandera-overlay">
+                                <span class="btn-leer-discurso">LEER DISCURSO</span>
+                            </div>
+                        </div>
+                        <div class="bandera-title">PALESTINA</div>
+                    </a>
+
+                    <!-- RUSIA -->
+                    <a href="rusia.html" class="bandera-card">
+                        <div class="bandera-img-wrapper">
+                            <div class="img-placeholder" style="background-color: #999999;"></div>
+                            <div class="bandera-overlay">
+                                <span class="btn-leer-discurso">LEER DISCURSO</span>
+                            </div>
+                        </div>
+                        <div class="bandera-title">RUSIA</div>
+                    </a>
+
+                    <!-- UCRANIA -->
+                    <a href="ucrania.html" class="bandera-card">
+                        <div class="bandera-img-wrapper">
+                            <div class="img-placeholder" style="background-color: #808080;"></div>
+                            <div class="bandera-overlay">
+                                <span class="btn-leer-discurso">LEER DISCURSO</span>
+                            </div>
+                        </div>
+                        <div class="bandera-title">UCRANIA</div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) - FONDO NEGRO Y MENÚ CENTRADO -->
+    <footer class="main-footer" style="background-color: #000000;">
+        <div class="footer-top container" style="display: flex; justify-content: center; align-items: center;">
+            
+            <!-- Navegación Centrada -->
+            <div class="footer-col footer-nav" style="text-align: center;">
+                <ul style="align-items: center;">
+                    <li><a href="../">INICIO</a></li>
+                    <li><a href="./">DISCURSOS</a></li>
+                    <li><a href="../reflexion/">REFLEXIÓN</a></li>
+                    <li><a href="../fotos/">FOTOS</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <button id="btnVolverArriba" title="Volver al inicio">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script>
+        const btnVolver = document.getElementById("btnVolverArriba");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btnVolver.classList.add("mostrar");
+            } else {
+                btnVolver.classList.remove("mostrar");
+            }
+        };
+        btnVolver.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+    <!-- SCRIPT PARA CELULARES -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

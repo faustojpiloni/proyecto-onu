@@ -21,7 +21,7 @@
     <!-- CABECERA Y NAVEGACIÓN -->
     <header class="main-header">
         <a href="./" class="logo-link">
-            <!-- AQUÍ VA EL LOGO DEL COLEGIO (TAMAÑO AUMENTADO) -->
+            <!-- LOGO DEL COLEGIO -->
             <img src="assets/img/logo_iades.png" alt="Logo IADES" style="max-height: 100px;">
         </a>
 
@@ -61,7 +61,7 @@
                 </div>
             </div>
 
-            <!-- BOTONES CORREGIDOS PARA QUE SEAN CÍRCULOS PERFECTOS -->
+            <!-- BOTONES CÍRCULOS PERFECTOS -->
             <button class="carousel-control prev" onclick="moveSlide(-1)" style="width: 60px; height: 60px; border-radius: 50%; padding: 0; display: flex; align-items: center; justify-content: center;">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
@@ -88,8 +88,8 @@
         </section>
     </main>
 
-    <!-- PIE DE PÁGINA (FOOTER) - FONDO NEGRO Y MENÚ CENTRADO -->
-    <footer class="main-footer" style="background-color: #000000;">
+    <!-- PIE DE PÁGINA (FOOTER) UNIFICADO GRIS OSCURO (#222222) -->
+    <footer class="main-footer">
         <div class="footer-top container" style="display: flex; justify-content: center; align-items: center;">
             
             <!-- Navegación Centrada -->
@@ -147,11 +147,9 @@
 
         slideInterval = setInterval(autoPlay, 5000);
 
-
         // --- LÓGICA DEL BOTÓN "VOLVER ARRIBA" ---
         const btnVolver = document.getElementById("btnVolverArriba");
 
-        // Detecta el scroll de la página
         window.onscroll = function() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 btnVolver.classList.add("mostrar");
@@ -160,17 +158,14 @@
             }
         };
 
-        // Al hacer clic, sube suavemente
         btnVolver.addEventListener("click", function() {
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
         });
-    </script>
 
-    <!-- SCRIPT PARA CELULARES -->
-    <script>
+        // --- SCRIPT PARA CELULARES ---
         const mobileMenu = document.getElementById('mobile-menu');
         const navList = document.getElementById('nav-list');
 

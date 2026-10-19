@@ -15,16 +15,6 @@
     
     <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="../assets/css/style.css">
-    
-    <!-- Un pequeño ajuste para que el texto del discurso se justifique y tenga buen tamaño -->
-    <style>
-        .service-info p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            text-align: justify;
-            color: #222222;
-        }
-    </style>
 </head>
 <body>
 
@@ -54,17 +44,18 @@
 
     <main>
         <!-- SECCIÓN: TÍTULO DEL PAÍS -->
-        <section class="hero-discursos" style="background-image: none; background-color: #51668D;">
+        <section class="hero-discursos" style="background-image: none;">
             <h1>ESTADOS UNIDOS</h1>
         </section>
 
-        <!-- SECCIÓN: TEXTO DEL DISCURSO (Usando la estructura original de Servicios) -->
+        <!-- SECCIÓN: TEXTO DEL DISCURSO (Estructura de Servicios con fotos alternadas) -->
         <section class="services-list-section bg-white" style="padding-top: 60px;">
             <div class="container">
                 
                 <!-- BLOQUE 1: Imagen a la DERECHA (Gracias a la clase 'reverse') -->
                 <div class="service-card reverse">
                     <div class="polaroid-service">
+                        <!-- Aquí irá la foto real cuando la subas en src="..." -->
                         <div class="polaroid-service-img" style="background-color: #e6e6e6;"></div>
                     </div>
                     <div class="service-info">
@@ -141,7 +132,7 @@
     </main>
 
     <!-- PIE DE PÁGINA (FOOTER) -->
-    <footer class="main-footer" style="background-color: #000000;">
+    <footer class="main-footer">
         <div class="footer-top container" style="display: flex; justify-content: center; align-items: center;">
             <div class="footer-col footer-nav" style="text-align: center;">
                 <ul style="align-items: center;">

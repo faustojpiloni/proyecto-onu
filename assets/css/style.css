@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RESET Y VARIABLES BASE
+   RESET Y VARIABLES BASE (Adaptado a Proyecto ONU)
    ========================================================================== */
 * {
     margin: 0;
@@ -10,7 +10,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #ffffff;
-    color: #222222; 
+    color: #222222; /* Gris Oscuro Institucional */
     line-height: 1.6;
 }
 
@@ -18,6 +18,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.bg-white {
+    background-color: #ffffff !important;
 }
 
 /* ==========================================================================
@@ -30,8 +34,8 @@ body {
     padding: 20px 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #eeeeee;
-    position: relative; 
-    z-index: 9999; 
+    position: relative;
+    z-index: 9999;
 }
 
 .logo-link {
@@ -73,21 +77,21 @@ body {
 
 .main-nav a:hover,
 .main-nav a.active {
-    color: #51668D;
+    color: #51668D; /* Azul Institucional al pasar el mouse */
     text-decoration: underline;
     text-underline-offset: 6px;
     text-decoration-thickness: 2px;
 }
 
-/* --- DISEÑO DEL BOTÓN HAMBURGUESA (Oculto en PC) --- */
+/* --- DISEÑO DEL BOTÓN HAMBURGUESA (Celulares) --- */
 .menu-toggle {
-    display: none; 
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 22px;
     cursor: pointer;
-    z-index: 1001; 
+    z-index: 1001;
 }
 
 .menu-toggle span {
@@ -110,7 +114,7 @@ body {
 }
 
 /* ==========================================================================
-   CARRUSEL INICIO (IMÁGENES GRANDES)
+   CARRUSEL PRINCIPAL (INICIO)
    ========================================================================== */
 .carousel {
     position: relative;
@@ -149,7 +153,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(81, 102, 141, 0.5); /* Azul con transparencia */
+    background: rgba(255, 255, 255, 0.3);
     color: #ffffff;
     border: none;
     font-size: 2rem;
@@ -160,47 +164,29 @@ body {
 }
 
 .carousel-control:hover {
-    background: rgba(34, 34, 34, 0.8); /* Gris oscuro en hover */
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .prev { left: 20px; }
 .next { right: 20px; }
 
-.temp-text {
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: 600;
-}
-
 /* ==========================================================================
-   SECCIÓN: QUIÉNES SOMOS / PRESENTACIÓN
+   SECCIÓN: HERO DISCURSOS (Reemplaza a los viejos fondos grises)
    ========================================================================== */
-.about-section {
-    padding: 80px 20px;
-    background-color: #ffffff;
-    text-align: center;
+.hero-discursos {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    min-height: 300px;
+    background-color: #51668D; /* Azul de la escuela */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.about-section p {
-    font-size: 1.2rem; 
-    font-weight: 300;
-    max-width: 950px;
-    margin: 0 auto;
-    line-height: 1.8;
-    color: #222222; 
-}
-
-/* ==========================================================================
-   SECCIÓN: SLOGAN O FRASE DESTACADA
-   ========================================================================== */
-.slogan-section {
-    background-color: #51668D; 
-    color: #ffffff;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.slogan-section h2 {
+.hero-discursos h1 {
     position: relative;
     z-index: 2;
     color: #ffffff;
@@ -208,14 +194,215 @@ body {
     font-weight: 600;
     text-align: center;
     padding: 0 20px;
+    max-width: 900px;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   SECCIÓN: DISCURSO INDIVIDUAL Y FOTOS POLAROID (Ex Servicios)
+   ========================================================================== */
+.services-list-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+}
+
+.service-card {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+}
+
+.service-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-card:last-child {
+    margin-bottom: 0;
+}
+
+.polaroid-service {
+    position: relative;
+    background-color: #ffffff;
+    padding: 12px 12px 75px 12px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 320px;
     margin: 0 auto;
+    flex-shrink: 0;
+}
+
+.polaroid-service-img {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+}
+
+.service-info {
+    flex: 1;
+    color: #222222;
+}
+
+.service-info h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    color: #222222;
+}
+
+.service-info p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    text-align: justify; /* Textos justificados para los discursos */
+    color: #222222;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   GRILLA DE PAÍSES (Ex Proyectos)
+   ========================================================================== */
+.projects-grid-section {
+    padding: 5rem 0;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    padding: 0 1rem;
+}
+
+.polaroid-card {
+    position: relative;
+    background-color: #fff;
+    padding: 12px 12px 75px 12px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+.polaroid-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.polaroid-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.polaroid-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.4s ease;
+}
+
+.polaroid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(81, 102, 141, 0.7); /* Azul institucional transparente */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.polaroid-card:hover .polaroid-overlay {
+    opacity: 1;
+}
+
+.btn-ver-mas {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.1rem;
+    border: 2px solid #fff;
+    padding: 0.6rem 1.5rem;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.polaroid-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222222; 
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.polaroid-card:hover .polaroid-title {
+    color: #51668D; /* Pinta azul el nombre del país al hacer hover */
+}
+
+/* ==========================================================================
+   BOTONES DE NAVEGACIÓN ANTERIOR / SIGUIENTE
+   ========================================================================== */
+.detalle-navegacion-section {
+    background-color: #fff;
+    padding: 0 1rem 5rem 1rem;
+}
+.nav-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-top: 1px solid #ccc;
+    padding-top: 2rem;
+}
+.btn-nav-proyecto {
+    display: inline-block;
+    color: #222222;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.3s;
+}
+.btn-nav-proyecto i {
+    margin: 0 8px;
+}
+.btn-nav-proyecto:hover {
+    color: #51668D; 
+    transform: scale(1.05);
+}
+
+.btn-nav-proyecto.disabled {
+    color: #a0a0a0;
+    pointer-events: none;
+    cursor: not-allowed;
 }
 
 /* ==========================================================================
    FOOTER (PIE DE PÁGINA)
    ========================================================================== */
 .main-footer {
-    background-color: #222222;
+    background-color: #000000; /* Fondo 100% Negro */
     color: #ffffff;
 }
 
@@ -226,22 +413,6 @@ body {
     padding: 60px 20px;
     flex-wrap: wrap;
     gap: 40px;
-}
-
-.footer-logo {
-    display: flex;
-    flex-direction: column;
-}
-.logo-title-footer {
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: 0.15em;
-}
-.logo-subtitle-footer {
-    font-size: 0.65rem;
-    font-weight: 400;
-    letter-spacing: 0.35em;
-    margin-top: 4px;
 }
 
 .footer-nav ul {
@@ -261,62 +432,19 @@ body {
     color: #51668D;
 }
 
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 0.9rem;
-}
-
-.contact-item i {
-    font-size: 1.2rem;
-    color: #51668D;
-}
-
-.contact-item a, .phones a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contact-item a:hover, .phones a:hover {
-    color: #51668D;
-    text-decoration: underline;
-}
-
-.phones {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
 .footer-bottom {
-    background-color: #1a1a1a; /* Un gris apenas más oscuro que el #222222 */
+    background-color: #000000;
     padding: 20px;
     font-size: 0.8rem;
-    color: #cccccc;
+    color: #888888;
 }
 
 .bottom-flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-}
-
-.bottom-left, .bottom-right {
-    flex: 1;
-}
-
-.bottom-right {
-    text-align: right;
 }
 
 /* ==========================================================================
@@ -330,7 +458,7 @@ body {
     font-size: 20px;
     border: none;
     outline: none;
-    background-color: rgba(81, 102, 141, 0.7); 
+    background-color: rgba(81, 102, 141, 0.5); /* Azul con transparencia */
     backdrop-filter: blur(5px); 
     color: white;
     cursor: pointer;
@@ -352,299 +480,30 @@ body {
 }
 
 #btnVolverArriba:hover {
-    background-color: #222222;
+    background-color: rgba(81, 102, 141, 0.9);
 }
-
-/* ==========================================================================
-   PÁGINA: REFLEXIÓN
-   ========================================================================== */
-.hero-reflexion {
-    position: relative;
-    width: 100%;
-    height: 45vh;
-    background-color: #51668D; 
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(34, 34, 34, 0.55); 
-    z-index: 1;
-}
-
-.hero-reflexion h1 {
-    position: relative;
-    z-index: 2;
-    color: #ffffff;
-    font-size: 2.2rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 0 20px;
-    max-width: 900px;
-    line-height: 1.4;
-}
-
-.reflexion-content-section {
-    background-color: #ffffff;
-    padding: 90px 20px;
-}
-
-.reflexion-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.reflexion-container p {
-    font-size: 1.1rem;
-    color: #222222;
-    margin-bottom: 25px;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-/* Estructura tipo Polaroid para usar en Fotos o Reflexión */
-.polaroid {
-    position: relative;
-    background-color: #ffffff;
-    padding: 12px 12px 75px 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.polaroid-img {
-    width: 100%;
-    aspect-ratio: 1 / 1; 
-    object-fit: cover;
-}
-
-
-/* =========================================
-   PÁGINA: DISCURSOS (GRILLA DE BANDERAS)
-========================================= */
-.hero-discursos {
-    background-image: url('../img/hero-discursos.jpg'); 
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: 40vh;
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    background-color: #51668D;
-}
-
-.hero-discursos h1 {
-    position: relative;
-    z-index: 2;
-    color: #ffffff;
-    font-size: 2.2rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 0 20px;
-    max-width: 900px;
-    line-height: 1.4;
-}
-
-.discursos-grid-section {
-    padding: 5rem 0;
-}
-.discursos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 3rem;
-    padding: 0 1rem;
-}
-
-.bandera-card {
-    position: relative;
-    background-color: #fff;
-    padding: 12px 12px 75px 12px;
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #eaeaea;
-}
-.bandera-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(81, 102, 141, 0.3);
-}
-
-.bandera-img-wrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1.5 / 1; /* Proporción más apta para banderas */
-    overflow: hidden;
-    margin-bottom: 0;
-    border: 1px solid #eeeeee;
-}
-.bandera-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: filter 0.4s ease;
-}
-
-.bandera-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(81, 102, 141, 0.8);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-.bandera-card:hover .bandera-overlay {
-    opacity: 1;
-}
-
-.btn-leer-discurso {
-    color: #fff;
-    font-weight: 800;
-    font-size: 1.1rem;
-    border: 2px solid #fff;
-    padding: 0.6rem 1.5rem;
-    letter-spacing: 1px;
-    border-radius: 4px;
-}
-
-.bandera-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 75px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #222222; 
-    font-weight: 700;
-    font-size: 1.1rem;
-    text-align: center;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    transition: color 0.3s;
-}
-
-.bandera-card:hover .bandera-title {
-    color: #51668D;
-}
-
-/* =========================================
-   SECCIÓN DISCURSO INDIVIDUAL (POR PAÍS)
-========================================= */
-.hero-detalle-discurso {
-    background-image: url('../img/hero-discurso-individual.jpg'); 
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: 40vh;
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    background-color: #51668D;
-}
-
-.hero-detalle-discurso h1 {
-    position: relative;
-    z-index: 2;
-    color: #ffffff;
-    font-size: 2.2rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 0 20px;
-    max-width: 900px;
-    line-height: 1.4;
-}
-
-.detalle-texto-section {
-    background-color: #ffffff; 
-    color: #222222;
-    padding: 4rem 1rem;
-}
-.detalle-texto-section p {
-    font-size: 1.1rem;
-    font-weight: 400;
-    max-width: 900px;
-    margin: 0 auto 20px auto;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-/* Navegación entre discursos */
-.detalle-navegacion-section {
-    background-color: #fff;
-    padding: 0 1rem 5rem 1rem;
-}
-.nav-buttons-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    border-top: 1px solid #ccc;
-    padding-top: 2rem;
-}
-.btn-nav-discurso {
-    display: inline-block;
-    color: #222222;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s, transform 0.3s;
-}
-.btn-nav-discurso i {
-    margin: 0 8px;
-}
-.btn-nav-discurso:hover {
-    color: #51668D; 
-    transform: scale(1.05);
-}
-
 
 /* ==========================================================================
    DISEÑO RESPONSIVE (CELULARES Y TABLETS)
    ========================================================================== */
 @media (max-width: 768px) {
     
+    /* CABECERA Y MENÚ DESPLEGABLE */
     .main-header {
         padding: 15px 20px;
     }
 
-    .logo-title { font-size: 1.6rem; }
-    .logo-subtitle { font-size: 0.55rem; }
+    .logo-title {
+        font-size: 1.6rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.55rem;
+    }
 
     .menu-toggle {
         display: flex; 
-        margin-left: auto; 
+        margin-left: auto;
     }
 
     .main-nav {
@@ -668,7 +527,7 @@ body {
     }
 
     .main-nav ul.active {
-        max-height: 400px; 
+        max-height: 400px;
     }
 
     .main-nav ul li {
@@ -683,28 +542,29 @@ body {
         border-top: 1px solid #eeeeee;
     }
 
-    .hero-reflexion h1, 
-    .hero-discursos h1, 
-    .hero-detalle-discurso h1 {
+    /* REDUCCIÓN PROPORCIONAL DE FUENTES Y MÁRGENES */
+    .hero-discursos h1 {
         font-size: 1.6rem;
     }
 
-    .slogan-section h2 { font-size: 1.6rem; }
+    .services-list-section, .projects-grid-section, .detalle-navegacion-section {
+        padding: 40px 20px;
+    }
 
-    p, .about-section p, .reflexion-container p, .detalle-texto-section p {
+    /* APILAR TARJETAS (DISCURSOS) */
+    .service-card, .service-card.reverse {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .service-info h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .service-info p {
         font-size: 1rem;
-        line-height: 1.6;
-        text-align: left; /* Textos justificados o a la izquierda en móvil se leen mejor */
-    }
-
-    .about-section, .reflexion-content-section, 
-    .detalle-texto-section {
-        padding: 50px 20px; 
-    }
-
-    .carousel-control {
-        font-size: 1.2rem;
-        padding: 10px 15px;
     }
 
     /* FOOTER */
@@ -715,11 +575,9 @@ body {
         gap: 40px;
         padding: 50px 20px;
     }
-
-    .logo-title-footer { font-size: 1.6rem; }
     
-    .footer-nav ul, .footer-contact {
-        align-items: center; 
+    .footer-nav ul {
+        align-items: center;
     }
     
     .bottom-flex {
@@ -727,5 +585,4 @@ body {
         text-align: center;
         gap: 15px;
     }
-    .bottom-right { text-align: center; }
 }

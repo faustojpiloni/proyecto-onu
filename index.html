@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | PROYECTO ONU</title>
+    
+    <!-- Fuentes de Google: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
 
+    <!-- CABECERA Y NAVEGACIÓN -->
+    <header class="main-header">
+        <a href="./" class="logo-link">
+            <!-- AQUÍ VA EL LOGO DEL COLEGIO -->
+            <img src="assets/img/logo_iades.png" alt="Logo IADES" style="max-height: 60px;">
+        </a>
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="main-nav">
+            <ul id="nav-list">
+                <li><a href="./" class="active">INICIO</a></li>
+                <li><a href="discursos/">DISCURSOS</a></li>
+                <li><a href="reflexion/">REFLEXIÓN</a></li>
+                <li><a href="fotos/">FOTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN DE IMÁGENES (CARRUSEL) -->
+        <section id="hero" class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-color: #d1d5db;">
+                    <p class="temp-text">Imagen del Proyecto 1</p>
+                </div>
+                <div class="carousel-item" style="background-color: #9ca3af;">
+                    <p class="temp-text">Imagen del Proyecto 2</p>
+                </div>
+                <div class="carousel-item" style="background-color: #6b7280;">
+                    <p class="temp-text">Imagen del Proyecto 3</p>
+                </div>
+                <div class="carousel-item" style="background-color: #4b5563;">
+                    <p class="temp-text">Imagen del Proyecto 4</p>
+                </div>
+            </div>
+
+            <button class="carousel-btn prev-btn" onclick="moveSlide(-1)">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            
+            <button class="carousel-btn next-btn" onclick="moveSlide(1)">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </section>
+
+        <!-- SECCIÓN: SLOGAN (TÍTULO PRINCIPAL) -->
+        <section id="slogan" class="slogan-section">
+            <div class="container">
+                <h2>PROYECTO ONU</h2>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: DESCRIPCIÓN DEL PROYECTO -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <p>
+                    Aquí irá la descripción detallada del proyecto de la ONU. 
+                    Puedes explicar en qué consistió el debate, qué temas se trataron, 
+                    el esfuerzo de los alumnos, y los objetivos alcanzados durante 
+                    esta experiencia educativa. (Reemplaza este texto por la descripción final).
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="main-footer">
+        <div class="footer-top container">
+            
+            <!-- Columna Izquierda: Logo (Ahora también es la imagen del colegio) -->
+            <div class="footer-col footer-logo" style="align-items: flex-start;">
+                <img src="assets/img/logo_iades.png" alt="Logo IADES" style="max-height: 80px; filter: brightness(0) invert(1);">
+            </div>
+
+            <!-- Columna Derecha: Navegación movida hacia la derecha -->
+            <div class="footer-col footer-nav" style="margin-left: auto; text-align: right;">
+                <ul style="align-items: flex-end;">
+                    <li><a href="./">INICIO</a></li>
+                    <li><a href="discursos/">DISCURSOS</a></li>
+                    <li><a href="reflexion/">REFLEXIÓN</a></li>
+                    <li><a href="fotos/">FOTOS</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <button id="btnVolverArriba" title="Volver al inicio">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- SCRIPT DEL CARRUSEL Y BOTÓN -->
+    <script>
+        // --- LÓGICA DEL CARRUSEL ---
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+        let slideInterval;
+
+        function updateCarousel() {
+            for (let i = 0; i < totalSlides; i++) {
+                slides[i].classList.remove('active');
+            }
+            slides[currentSlide].classList.add('active');
+        }
+
+        function moveSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            } else if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            }
+            updateCarousel();
+            resetInterval();
+        }
+
+        function autoPlay() {
+            moveSlide(1);
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(autoPlay, 5000);
+        }
+
+        slideInterval = setInterval(autoPlay, 5000);
+
+
+        // --- LÓGICA DEL BOTÓN "VOLVER ARRIBA" ---
+        const btnVolver = document.getElementById("btnVolverArriba");
+
+        // Detecta el scroll de la página
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btnVolver.classList.add("mostrar");
+            } else {
+                btnVolver.classList.remove("mostrar");
+            }
+        };
+
+        // Al hacer clic, sube suavemente
+        btnVolver.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    <!-- SCRIPT PARA CELULARES -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

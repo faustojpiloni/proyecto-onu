@@ -10,7 +10,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #ffffff;
-    color: #333333; 
+    color: #222222; 
     line-height: 1.6;
 }
 
@@ -30,8 +30,8 @@ body {
     padding: 20px 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #eeeeee;
-    position: relative; /* Necesario para el menú desplegable en móviles */
-    z-index: 9999; /* ¡ESTO ES VITAL PARA QUE EL MENÚ NO QUEDE DETRÁS DE LAS FOTOS! */
+    position: relative; 
+    z-index: 9999; 
 }
 
 .logo-link {
@@ -39,7 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #333333;
+    color: #222222;
 }
 
 .logo-title {
@@ -65,7 +65,7 @@ body {
 
 .main-nav a {
     text-decoration: none;
-    color: #333333;
+    color: #222222;
     font-weight: 600;
     font-size: 0.9rem;
     transition: all 0.3s ease;
@@ -73,7 +73,7 @@ body {
 
 .main-nav a:hover,
 .main-nav a.active {
-    color: #999999;
+    color: #51668D;
     text-decoration: underline;
     text-underline-offset: 6px;
     text-decoration-thickness: 2px;
@@ -81,25 +81,24 @@ body {
 
 /* --- DISEÑO DEL BOTÓN HAMBURGUESA (Oculto en PC) --- */
 .menu-toggle {
-    display: none; /* Se oculta en PC, se muestra en móvil */
+    display: none; 
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 22px;
     cursor: pointer;
-    z-index: 1001; /* Para que quede por encima del menú desplegable */
+    z-index: 1001; 
 }
 
 .menu-toggle span {
     display: block;
     height: 3px;
     width: 100%;
-    background-color: #333333;
+    background-color: #222222;
     border-radius: 3px;
     transition: all 0.3s ease;
 }
 
-/* Animación a 'X' cuando tiene la clase 'open' */
 .menu-toggle.open span:nth-child(1) {
     transform: translateY(9.5px) rotate(45deg);
 }
@@ -111,7 +110,7 @@ body {
 }
 
 /* ==========================================================================
-   CARRUSEL (IMÁGENES GRANDES)
+   CARRUSEL INICIO (IMÁGENES GRANDES)
    ========================================================================== */
 .carousel {
     position: relative;
@@ -150,7 +149,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(81, 102, 141, 0.5); /* Azul con transparencia */
     color: #ffffff;
     border: none;
     font-size: 2rem;
@@ -161,7 +160,7 @@ body {
 }
 
 .carousel-control:hover {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(34, 34, 34, 0.8); /* Gris oscuro en hover */
 }
 
 .prev { left: 20px; }
@@ -174,7 +173,7 @@ body {
 }
 
 /* ==========================================================================
-   SECCIÓN: QUIÉNES SOMOS
+   SECCIÓN: QUIÉNES SOMOS / PRESENTACIÓN
    ========================================================================== */
 .about-section {
     padding: 80px 20px;
@@ -188,14 +187,14 @@ body {
     max-width: 950px;
     margin: 0 auto;
     line-height: 1.8;
-    color: #444444; 
+    color: #222222; 
 }
 
 /* ==========================================================================
-   SECCIÓN: SLOGAN
+   SECCIÓN: SLOGAN O FRASE DESTACADA
    ========================================================================== */
 .slogan-section {
-    background-color: #4a5568; 
+    background-color: #51668D; 
     color: #ffffff;
     padding: 60px 20px;
     text-align: center;
@@ -216,7 +215,7 @@ body {
    FOOTER (PIE DE PÁGINA)
    ========================================================================== */
 .main-footer {
-    background-color: #111111;
+    background-color: #222222;
     color: #ffffff;
 }
 
@@ -259,7 +258,7 @@ body {
     font-size: 0.9rem;
 }
 .footer-nav a:hover {
-    color: #999999;
+    color: #51668D;
 }
 
 .footer-contact {
@@ -277,7 +276,7 @@ body {
 
 .contact-item i {
     font-size: 1.2rem;
-    color: #cccccc;
+    color: #51668D;
 }
 
 .contact-item a, .phones a {
@@ -287,7 +286,7 @@ body {
 }
 
 .contact-item a:hover, .phones a:hover {
-    color: #999999;
+    color: #51668D;
     text-decoration: underline;
 }
 
@@ -298,10 +297,10 @@ body {
 }
 
 .footer-bottom {
-    background-color: #000000;
+    background-color: #1a1a1a; /* Un gris apenas más oscuro que el #222222 */
     padding: 20px;
     font-size: 0.8rem;
-    color: #888888;
+    color: #cccccc;
 }
 
 .bottom-flex {
@@ -331,7 +330,7 @@ body {
     font-size: 20px;
     border: none;
     outline: none;
-    background-color: rgba(0, 0, 0, 0.25); 
+    background-color: rgba(81, 102, 141, 0.7); 
     backdrop-filter: blur(5px); 
     color: white;
     cursor: pointer;
@@ -353,17 +352,17 @@ body {
 }
 
 #btnVolverArriba:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #222222;
 }
 
 /* ==========================================================================
-   PÁGINA: NOSOTROS
+   PÁGINA: REFLEXIÓN
    ========================================================================== */
-.hero-nosotros {
+.hero-reflexion {
     position: relative;
     width: 100%;
     height: 45vh;
-    background-color: #6b7280; 
+    background-color: #51668D; 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -374,11 +373,11 @@ body {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.55); 
+    background-color: rgba(34, 34, 34, 0.55); 
     z-index: 1;
 }
 
-.hero-nosotros h1 {
+.hero-reflexion h1 {
     position: relative;
     z-index: 2;
     color: #ffffff;
@@ -390,56 +389,25 @@ body {
     line-height: 1.4;
 }
 
-.what-we-do-section {
-    background-color: #4a5568; 
-    color: #ffffff;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.what-we-do-section p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    max-width: 950px;
-    margin: 0 auto;
-    line-height: 1.8;
-}
-
-.philosophy-section {
+.reflexion-content-section {
     background-color: #ffffff;
     padding: 90px 20px;
 }
 
-.philosophy-container {
+.reflexion-container {
     max-width: 900px;
     margin: 0 auto;
 }
 
-.philosophy-container p {
+.reflexion-container p {
     font-size: 1.1rem;
-    color: #444444;
+    color: #222222;
     margin-bottom: 25px;
     line-height: 1.8;
     text-align: justify;
 }
 
-.founders-section {
-    background-color: #4a5568; 
-    padding: 90px 20px;
-}
-
-.founder-card {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    max-width: 1000px;
-    margin: 0 auto 80px auto;
-}
-
-.founder-card:last-child {
-    margin-bottom: 0;
-}
-
+/* Estructura tipo Polaroid para usar en Fotos o Reflexión */
 .polaroid {
     position: relative;
     background-color: #ffffff;
@@ -459,307 +427,12 @@ body {
     object-fit: cover;
 }
 
-.polaroid-icons {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 0;
-}
-
-.polaroid-icons a {
-    color: #333333;
-    font-size: 1.4rem;
-    transition: color 0.3s;
-}
-
-.polaroid-icons a:hover {
-    color: #999999;
-}
-
-.founder-info {
-    flex: 1;
-    color: #ffffff;
-}
-
-.founder-info h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-.founder-info p {
-    font-size: 1.1rem;
-    font-weight: 300;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-/* ==========================================================================
-   PÁGINA: SERVICIOS
-   ========================================================================== */
-.hero-servicios {
-    position: relative;
-    width: 100%;
-    height: 45vh;
-    background-color: #4a5568; 
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-servicios h1 {
-    position: relative;
-    z-index: 2;
-    color: #ffffff;
-    font-size: 2.2rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 0 20px;
-    max-width: 900px;
-    line-height: 1.4;
-}
-
-.services-list-section {
-    background-color: #ffffff;
-    padding: 90px 20px;
-}
-
-.service-card {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    max-width: 1000px;
-    margin: 0 auto 90px auto;
-}
-
-.service-card.reverse {
-    flex-direction: row-reverse;
-}
-
-.service-card:last-child {
-    margin-bottom: 0;
-}
-
-.polaroid-service {
-    position: relative;
-    background-color: #ffffff;
-    padding: 12px 12px 75px 12px; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    flex-shrink: 0;
-}
-
-.polaroid-service-img {
-    width: 100%;
-    aspect-ratio: 1 / 1; 
-    object-fit: cover;
-}
-
-.service-info {
-    flex: 1;
-    color: #333333;
-}
-
-.service-info h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    color: #111111;
-}
-
-.service-info p {
-    font-size: 1.1rem;
-    font-weight: 300;
-    line-height: 1.8;
-    text-align: justify;
-    color: #444444;
-}
-
-/* ==========================================================================
-   PÁGINA: CONTACTO
-   ========================================================================== */
-.hero-contacto {
-    position: relative;
-    width: 100%;
-    height: 45vh;
-    background-color: #6b7280; 
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-contacto h1 {
-    position: relative;
-    z-index: 2;
-    color: #ffffff;
-    font-size: 2.2rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 0 20px;
-    max-width: 900px;
-    line-height: 1.4;
-}
-
-.contact-form-section {
-    background-color: #ffffff;
-    padding: 80px 20px;
-}
-
-.form-wrapper {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: #f9f9f9;
-    padding: 50px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.custom-form {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.form-group label {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #333333;
-    letter-spacing: 0.5px;
-}
-
-.custom-form input[type="text"],
-.custom-form input[type="email"],
-.custom-form textarea {
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    color: #444444;
-    background-color: #ffffff;
-    transition: border-color 0.3s;
-    resize: none !important;
-}
-
-.custom-form input:focus,
-.custom-form textarea:focus {
-    outline: none;
-    border-color: #4a5568;
-}
-
-.custom-form input::placeholder,
-.custom-form textarea::placeholder {
-    color: #a0a0a0;
-    font-weight: 300;
-}
-
-.radio-group {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 5px;
-}
-
-.custom-radio {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 0.95rem;
-    color: #444444;
-    font-weight: 400 !important;
-}
-
-.custom-radio input[type="radio"] {
-    display: none;
-}
-
-.radio-mark {
-    width: 22px;
-    height: 22px;
-    border: 2px solid #a0a0a0;
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    margin-right: 15px;
-    transition: all 0.3s ease;
-}
-
-.custom-radio:hover .radio-mark {
-    border-color: #4a5568;
-}
-
-.custom-radio input[type="radio"]:checked + .radio-mark {
-    border-color: #4a5568;
-}
-
-.custom-radio input[type="radio"]:checked + .radio-mark::after {
-    content: "";
-    width: 12px;
-    height: 12px;
-    background-color: #4a5568; 
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.btn-enviar {
-    background-color: #4a5568;
-    color: #ffffff;
-    border: none;
-    padding: 15px 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-    align-self: flex-start;
-}
-
-.btn-enviar:hover {
-    background-color: #374151; 
-}
-
-.btn-enviar:disabled {
-    background-color: #cccccc;
-    color: #888888;
-    cursor: not-allowed;
-}
-
-.btn-enviar:disabled:hover {
-    background-color: #cccccc; 
-}
 
 /* =========================================
-   SECCIÓN PROYECTOS - INDEX (GRILLA)
+   PÁGINA: DISCURSOS (GRILLA DE BANDERAS)
 ========================================= */
-.hero-proyectos {
-    background-image: url('../img/hero-proyectos.jpg'); 
+.hero-discursos {
+    background-image: url('../img/hero-discursos.jpg'); 
     background-size: cover;
     background-position: center;
     position: relative;
@@ -770,10 +443,10 @@ body {
     justify-content: center;
     text-align: center;
     color: #fff;
-    background-color: #6b7280;
+    background-color: #51668D;
 }
 
-.hero-proyectos h1 {
+.hero-discursos h1 {
     position: relative;
     z-index: 2;
     color: #ffffff;
@@ -785,17 +458,17 @@ body {
     line-height: 1.4;
 }
 
-.projects-grid-section {
+.discursos-grid-section {
     padding: 5rem 0;
 }
-.projects-grid {
+.discursos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 3rem;
     padding: 0 1rem;
 }
 
-.polaroid-card {
+.bandera-card {
     position: relative;
     background-color: #fff;
     padding: 12px 12px 75px 12px;
@@ -809,19 +482,20 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #eaeaea;
 }
-.polaroid-card:hover {
+.bandera-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 25px rgba(81, 102, 141, 0.3);
 }
 
-.polaroid-img-wrapper {
+.bandera-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1; 
+    aspect-ratio: 1.5 / 1; /* Proporción más apta para banderas */
     overflow: hidden;
     margin-bottom: 0;
+    border: 1px solid #eeeeee;
 }
-.polaroid-img-wrapper img {
+.bandera-img-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -829,13 +503,13 @@ body {
     transition: filter 0.4s ease;
 }
 
-.polaroid-overlay {
+.bandera-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(74, 85, 104, 0.6);
+    background: rgba(81, 102, 141, 0.8);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     display: flex;
@@ -844,11 +518,11 @@ body {
     opacity: 0;
     transition: opacity 0.4s ease;
 }
-.polaroid-card:hover .polaroid-overlay {
+.bandera-card:hover .bandera-overlay {
     opacity: 1;
 }
 
-.btn-ver-mas {
+.btn-leer-discurso {
     color: #fff;
     font-weight: 800;
     font-size: 1.1rem;
@@ -858,7 +532,7 @@ body {
     border-radius: 4px;
 }
 
-.polaroid-title {
+.bandera-title {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -868,7 +542,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333333; 
+    color: #222222; 
     font-weight: 700;
     font-size: 1.1rem;
     text-align: center;
@@ -877,15 +551,15 @@ body {
     transition: color 0.3s;
 }
 
-.polaroid-card:hover .polaroid-title {
-    color: #999999;
+.bandera-card:hover .bandera-title {
+    color: #51668D;
 }
 
 /* =========================================
-   SECCIÓN PROYECTO INDIVIDUAL (DETALLE)
+   SECCIÓN DISCURSO INDIVIDUAL (POR PAÍS)
 ========================================= */
-.hero-detalle-proyecto {
-    background-image: url('../img/hero-proyecto-individual.jpg'); 
+.hero-detalle-discurso {
+    background-image: url('../img/hero-discurso-individual.jpg'); 
     background-size: cover;
     background-position: center;
     position: relative;
@@ -896,10 +570,10 @@ body {
     justify-content: center;
     text-align: center;
     color: #fff;
-    background-color: #6b7280;
+    background-color: #51668D;
 }
 
-.hero-detalle-proyecto h1 {
+.hero-detalle-discurso h1 {
     position: relative;
     z-index: 2;
     color: #ffffff;
@@ -911,84 +585,21 @@ body {
     line-height: 1.4;
 }
 
-.detalle-descripcion-section {
-    background-color: #4a5568; 
-    color: #fff;
+.detalle-texto-section {
+    background-color: #ffffff; 
+    color: #222222;
     padding: 4rem 1rem;
 }
-.detalle-descripcion-section p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    max-width: 950px;
-    margin: 0 auto;
+.detalle-texto-section p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
     line-height: 1.8;
-    text-align: center;
+    text-align: justify;
 }
 
-.detalle-galeria-section {
-    background-color: #fff;
-    padding: 5rem 1rem;
-}
-.carousel-proyecto-wrapper {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    border: 8px solid #fff;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    overflow: hidden;
-}
-.carousel-proyecto-track-container {
-    height: 60vh; 
-    min-height: 400px;
-    position: relative;
-    overflow: hidden;
-}
-.carousel-proyecto-track {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    position: relative;
-    height: 100%;
-    transition: transform 0.6s ease-in-out;
-}
-.carousel-slide {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-}
-.carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.25);
-    color: #fff;
-    border: none;
-    font-size: 1.5rem;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
-    transition: background 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.6);
-}
-.prev-btn { left: 15px; }
-.next-btn { right: 15px; }
-
+/* Navegación entre discursos */
 .detalle-navegacion-section {
     background-color: #fff;
     padding: 0 1rem 5rem 1rem;
@@ -1002,61 +613,40 @@ body {
     border-top: 1px solid #ccc;
     padding-top: 2rem;
 }
-.btn-nav-proyecto {
+.btn-nav-discurso {
     display: inline-block;
-    color: #333333;
+    color: #222222;
     font-weight: 700;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s, transform 0.3s;
 }
-.btn-nav-proyecto i {
+.btn-nav-discurso i {
     margin: 0 8px;
 }
-.btn-nav-proyecto:hover {
-    color: #999999; 
+.btn-nav-discurso:hover {
+    color: #51668D; 
     transform: scale(1.05);
-}
-
-.btn-nav-proyecto.disabled {
-    color: #a0a0a0;
-    pointer-events: none;
-    cursor: not-allowed;
-}
-
-.img-placeholder {
-    background-color: #6b7280;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 
 /* ==========================================================================
-   DISEÑO RESPONSIVE (CELULARES Y TABLETS) - TODO AGRUPADO AQUÍ
+   DISEÑO RESPONSIVE (CELULARES Y TABLETS)
    ========================================================================== */
 @media (max-width: 768px) {
     
-    /* CABECERA Y MENÚ DESPLEGABLE */
     .main-header {
         padding: 15px 20px;
     }
 
-    .logo-title {
-        font-size: 1.6rem; /* Logo más chico */
-    }
-    
-    .logo-subtitle {
-        font-size: 0.55rem;
-    }
+    .logo-title { font-size: 1.6rem; }
+    .logo-subtitle { font-size: 0.55rem; }
 
     .menu-toggle {
-        display: flex; /* Muestra el botón hamburguesa */
-        margin-left: auto; /* EMPUJA EL BOTÓN HACIA EL BORDE DERECHO */
+        display: flex; 
+        margin-left: auto; 
     }
 
-    /* El contenedor 'nav' sale del flujo para no empujar al botón hamburguesa */
     .main-nav {
         position: absolute;
         top: 100%; 
@@ -1064,10 +654,9 @@ body {
         width: 100%;
         z-index: 1000;
         background-color: #ffffff;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1); /* Pasamos la sombra aquí */
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
     }
 
-    /* La lista (ul) ahora hace la animación sin problemas de posición */
     .main-nav ul {
         display: flex;
         flex-direction: column;
@@ -1079,7 +668,7 @@ body {
     }
 
     .main-nav ul.active {
-        max-height: 400px; /* Asegura que entren todas las pestañas */
+        max-height: 400px; 
     }
 
     .main-nav ul li {
@@ -1094,77 +683,31 @@ body {
         border-top: 1px solid #eeeeee;
     }
 
-    /* REDUCCIÓN PROPORCIONAL DE FUENTES Y MÁRGENES (GENERAL) */
-    .hero-nosotros h1, 
-    .hero-servicios h1, 
-    .hero-contacto h1, 
-    .hero-proyectos h1, 
-    .hero-detalle-proyecto h1 {
+    .hero-reflexion h1, 
+    .hero-discursos h1, 
+    .hero-detalle-discurso h1 {
         font-size: 1.6rem;
     }
 
-    .slogan-section h2 {
-        font-size: 1.6rem;
-    }
+    .slogan-section h2 { font-size: 1.6rem; }
 
-    p, .about-section p, .what-we-do-section p, .philosophy-container p, .detalle-descripcion-section p {
+    p, .about-section p, .reflexion-container p, .detalle-texto-section p {
         font-size: 1rem;
         line-height: 1.6;
-        text-align: center; /* Forzamos centrado en móvil */
+        text-align: left; /* Textos justificados o a la izquierda en móvil se leen mejor */
     }
 
-    .about-section, .what-we-do-section, .philosophy-section, 
-    .founders-section, .services-list-section, .contact-form-section, 
-    .detalle-descripcion-section, .detalle-galeria-section {
-        padding: 50px 20px; /* Reducimos espacios verticales enormes */
+    .about-section, .reflexion-content-section, 
+    .detalle-texto-section {
+        padding: 50px 20px; 
     }
 
-    /* CARRUSEL INICIO Y BOTONES */
     .carousel-control {
         font-size: 1.2rem;
         padding: 10px 15px;
     }
 
-    /* APILAR TARJETAS (NOSOTROS Y SERVICIOS) */
-    .service-card, .service-card.reverse, .founder-card {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-    
-    .service-info h3, .founder-info h3 {
-        font-size: 1.5rem;
-    }
-
-    .service-info p, .founder-info p {
-        text-align: center;
-        font-size: 1rem;
-    }
-
-    /* FORMULARIO CONTACTO */
-    .form-wrapper {
-        padding: 30px 20px;
-    }
-    .btn-enviar {
-        width: 100%;
-        text-align: center;
-    }
-
-    /* CARRUSEL PROYECTO INDIVIDUAL */
-    .carousel-proyecto-track-container {
-        height: 40vh;
-        min-height: 250px;
-    }
-    .carousel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-    .btn-nav-proyecto {
-        font-size: 0.9rem;
-    }
-
-    /* FOOTER (Apilar todo uno debajo del otro y centrar) */
+    /* FOOTER */
     .footer-top {
         flex-direction: column;
         align-items: center;
@@ -1175,12 +718,8 @@ body {
 
     .logo-title-footer { font-size: 1.6rem; }
     
-    .footer-nav ul {
-        align-items: center; /* Centrar links */
-    }
-
-    .footer-contact {
-        align-items: center; /* Centrar items de contacto */
+    .footer-nav ul, .footer-contact {
+        align-items: center; 
     }
     
     .bottom-flex {

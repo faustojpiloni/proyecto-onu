@@ -61,11 +61,12 @@
                 </div>
             </div>
 
-            <button class="carousel-btn prev-btn" onclick="moveSlide(-1)">
+            <!-- BOTONES CORREGIDOS PARA QUE APAREZCAN -->
+            <button class="carousel-control prev" onclick="moveSlide(-1)">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
             
-            <button class="carousel-btn next-btn" onclick="moveSlide(1)">
+            <button class="carousel-control next" onclick="moveSlide(1)">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
         </section>
@@ -87,18 +88,13 @@
         </section>
     </main>
 
-    <!-- PIE DE PÁGINA (FOOTER) - FONDO NEGRO -->
+    <!-- PIE DE PÁGINA (FOOTER) - FONDO NEGRO Y MENÚ CENTRADO -->
     <footer class="main-footer" style="background-color: #000000;">
-        <div class="footer-top container" style="align-items: center;">
+        <div class="footer-top container" style="display: flex; justify-content: center; align-items: center;">
             
-            <!-- Columna Izquierda: Logo (CENTRAMOS Y AUMENTAMOS TAMAÑO) -->
-            <div class="footer-col footer-logo" style="align-items: center; flex: 1;">
-                <img src="assets/img/logo_iades.png" alt="Logo IADES" style="max-height: 140px; filter: brightness(0) invert(1);">
-            </div>
-
-            <!-- Columna Derecha: Navegación -->
-            <div class="footer-col footer-nav" style="flex: 1; display: flex; justify-content: flex-end; text-align: right;">
-                <ul style="align-items: flex-end;">
+            <!-- Navegación Centrada -->
+            <div class="footer-col footer-nav" style="text-align: center;">
+                <ul style="align-items: center;">
                     <li><a href="./">INICIO</a></li>
                     <li><a href="discursos/">DISCURSOS</a></li>
                     <li><a href="reflexion/">REFLEXIÓN</a></li>

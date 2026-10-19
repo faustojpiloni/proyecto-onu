@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflexión | PROYECTO ONU</title>
+    
+    <!-- Fuentes de Google: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
 
+    <!-- CABECERA Y NAVEGACIÓN -->
+    <header class="main-header">
+        <a href="../" class="logo-link">
+            <img src="../assets/img/logo_iades.png" alt="Logo IADES" style="max-height: 100px;">
+        </a>
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="main-nav">
+            <ul id="nav-list">
+                <li><a href="../">INICIO</a></li>
+                <li><a href="../discursos/">DISCURSOS</a></li>
+                <li><a href="./" class="active">REFLEXIÓN</a></li>
+                <li><a href="../fotos/">FOTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN: TÍTULO -->
+        <section class="hero-discursos" style="background-image: none;">
+            <h1>REFLEXIÓN</h1>
+        </section>
+
+        <!-- SECCIÓN: TEXTO DE REFLEXIÓN (Estructura de fotos alternadas) -->
+        <section class="services-list-section bg-white" style="padding-top: 60px; padding-bottom: 60px;">
+            <div class="container">
+                
+                <!-- BLOQUE 1: Imagen a la DERECHA -->
+                <div class="service-card reverse">
+                    <div class="polaroid-service">
+                        <!-- Aquí irá la foto real cuando la subas en src="..." -->
+                        <div class="polaroid-service-img" style="background-color: #e6e6e6;"></div>
+                    </div>
+                    <div class="service-info">
+                        <p>
+                            Aquí comienza el primer bloque de la reflexión sobre nuestra participación en el Modelo de Naciones Unidas. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non est ac massa dignissim fermentum. 
+                            Suspendisse eget mauris in eros euismod commodo. Etiam ultricies fermentum felis, et hendrerit 
+                            enim consequat a. Integer vestibulum felis massa, vitae iaculis dui venenatis id.
+                        </p>
+                        <p>
+                            Integer pretium lobortis ipsum, sed porta augue luctus nec. Donec fermentum viverra diam, id 
+                            facilisis nulla finibus ut. Donec venenatis augue a vestibulum pulvinar. Morbi euismod est vitae 
+                            justo efficitur, nec elementum tellus elementum.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- BLOQUE 2: Imagen a la IZQUIERDA -->
+                <div class="service-card">
+                    <div class="polaroid-service">
+                        <div class="polaroid-service-img" style="background-color: #cccccc;"></div>
+                    </div>
+                    <div class="service-info">
+                        <p>
+                            Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. 
+                            Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+                        </p>
+                        <p>
+                            Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus 
+                            magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus. 
+                            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- BLOQUE 3: Imagen a la DERECHA -->
+                <div class="service-card reverse">
+                    <div class="polaroid-service">
+                        <div class="polaroid-service-img" style="background-color: #999999;"></div>
+                    </div>
+                    <div class="service-info">
+                        <p>
+                            Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula 
+                            ut id elit. Vestibulum id ligula porta felis euismod semper.
+                        </p>
+                        <p>
+                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum 
+                            nulla sed consectetur. Sed posuere consectetur est at lobortis.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="main-footer">
+        <div class="footer-top container" style="display: flex; justify-content: center; align-items: center;">
+            <div class="footer-col footer-nav" style="text-align: center;">
+                <ul style="align-items: center;">
+                    <li><a href="../">INICIO</a></li>
+                    <li><a href="../discursos/">DISCURSOS</a></li>
+                    <li><a href="./">REFLEXIÓN</a></li>
+                    <li><a href="../fotos/">FOTOS</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <button id="btnVolverArriba" class="btn-volver-arriba" title="Volver arriba">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // --- LÓGICA DEL BOTÓN "VOLVER ARRIBA" ---
+        const btnVolver = document.getElementById("btnVolverArriba");
+
+        if (btnVolver) {
+            window.onscroll = function() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    btnVolver.classList.add("mostrar");
+                } else {
+                    btnVolver.classList.remove("mostrar");
+                }
+            };
+            btnVolver.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        }
+
+        // --- SCRIPT PARA CELULARES ---
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        if(mobileMenu) {
+            mobileMenu.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+                navList.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
